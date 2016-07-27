@@ -1,0 +1,30 @@
+{
+  "name": "project",
+  "authors": [
+    "Ashdon-Prophet <ashdonprophet@gmail.com>"
+  ],
+  "description": "mean stack final project",
+  "main": "server.js",
+  "keywords": [
+    "MEAN",
+    "node.js",
+    "express",
+    "angular.js",
+    "mongodb"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "jquery": "^3.1.0",
+    "angular-cookies": "^1.5.8"
+  }
+}
