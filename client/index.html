@@ -1,8 +1,91 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title></title>
+    <style>
+        .placeholder250by200{
+            height: 250px;
+            width: 200px;
+            background-color: rgb(58, 67, 79);
+        }
+        .placeholder350by300{
+            height: 300px;
+            width: 350px;
+            background-color: rgb(58, 67, 79);
+        }
+        .placeholder450by300{
+            height: 300px;
+            width: 450px;
+            background-color: rgb(58, 67, 79);
+        }
+    </style>
+</head>
+<body ng-app='myApp' data-gr-c-s-loaded="true" data-pinterest-extension-installed="cr1.39.2">
+    <div class="container-fluid">
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+            <div class="navbar-header">
+                <span class="navbar-brand">Team Rocket T's</span>
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="pages">Pages <span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="pages">
+                            <li><a href="#/home">Home </a></li>
+                            <li><a href="#/merch">Merchendice </a></li>
+                            <li><a href="#/checkout">Checkout </a></li>
+                            <li><a href="#/products">Product </a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="admin">Admin Pages <span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="admin">
+                            <li><a href="#/admin/login">Login </a></li>
+                            <li><a href="#/admin/manage">Manage </a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="http://learn.codingdojo.com/" target="_blank">Coding Dojo</a></li>
+                    <li><a href="https://wrapbootstrap.com/?ref=bsw" target="_blank">WrapBootstrap Theme</a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+        <div class="container">
+            <div ng-view>
+
+            </div>
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+
+                        <ul class="list-unstyled">
+                            <li class="pull-right"><a href="#featured">Back to top</a></li>
+                            <li><a href="#/products">Product Catalog</a></li>
+                            <li><a href="#/admin/login">Admin? Login here.</a></li>
+                        </ul>
+                        <p>Website by <a href="https://github.com/Ashdon-Prophet" rel="nofollow">Ashdon Prophet</a>. Contact him at <a href="mailto:ashdonprophet@gmail.com">ashdonprophet@gmail.com</a>.</p>
+                        <p>Bootstrap Theme by <a href="http://thomaspark.co" rel="nofollow">Thomas Park</a>. Contact him at <a href="mailto:thomas@bootswatch.com">thomas@bootswatch.com</a>.</p>
+                        <p>Code released under the <a href="https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE">MIT License</a>.</p>
+
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+
+</body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="./../js/bootstrap.min.js" charset="utf-8"></script>
     <script src='./js/angular.js' charset='utf-8'></script>
@@ -26,10 +109,10 @@
         .when('/checkout', {
             templateUrl: 'partials/checkout.html'
         })
-        .when('/login', {
+        .when('/admin/login', {
             templateUrl: 'partials/admin_login.html'
         })
-        .when('/manage', {
+        .when('/admin/manage', {
             templateUrl: 'partials/admin_manage.html'
         })
         .otherwise({
@@ -37,47 +120,4 @@
         });
     });
     </script>
-</head>
-<body ng-app='myApp' data-gr-c-s-loaded="true" data-pinterest-extension-installed="cr1.39.2">
-    <div class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-        <div class="navbar-header">
-            <span class="navbar-brand">Team Rocket T's</span>
-            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            </button>
-        </div>
-        <div class="navbar-collapse collapse" id="navbar-main">
-            <ul class="nav navbar-nav">
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="pages">Pages <span class="caret"></span></a>
-                    <ul class="dropdown-menu" aria-labelledby="pages">
-                        <li><a href="#/home">Home </a></li>
-                        <li><a href="#/merch">Merchendice </a></li>
-                        <li><a href="#/checkout">Checkout </a></li>
-                        <li><a href="#/products">Product </a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="admin">Admin Pages <span class="caret"></span></a>
-                    <ul class="dropdown-menu" aria-labelledby="admin">
-                        <li><a href="#/login">Login </a></li>
-                        <li><a href="#/manage">Manage </a></li>
-                    </ul>
-                </li>
-            </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="http://learn.codingdojo.com/" target="_blank">Coding Dojo</a></li>
-                <li><a href="https://wrapbootstrap.com/?ref=bsw" target="_blank">WrapBootstrap Theme</a></li>
-            </ul>
-        </div>
-        </div>
-    </div>
-    <div class="container" ng-view>
-    </div>
-</body>
-
 </html>
